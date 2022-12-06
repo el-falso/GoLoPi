@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfl6qy2hd6fo1"]
+[gd_scene load_steps=3 format=3 uid="uid://bfl6qy2hd6fo1"]
 
 [ext_resource type="PackedScene" uid="uid://dm8rl53y68af2" path="res://Game/Chest/Chest.tscn" id="1_st3mr"]
+[ext_resource type="PackedScene" uid="uid://bw8b1bvt1dyed" path="res://gui_container.tscn" id="2_hriws"]
 
 [node name="World" type="Node2D"]
 
 [node name="Chest" parent="." instance=ExtResource("1_st3mr")]
 position = Vector2(480, 270)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUIContainer" parent="CanvasLayer" instance=ExtResource("2_hriws")]

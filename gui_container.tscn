@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw8b1bvt1dyed"]
+
+[ext_resource type="Script" path="res://gui_container.gd" id="1_5yq31"]
+
+[node name="GUIContainer" type="GridContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 0
+columns = 2
+script = ExtResource("1_5yq31")
+
+[node name="LevelContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="LevelContainer"]
+layout_mode = 2
+text = "Level"
+
+[node name="LevelNum" type="Label" parent="LevelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="LockpicksContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LockpicksLabel" type="Label" parent="LockpicksContainer"]
+layout_mode = 2
+text = "Lockpicks"
+
+[node name="LockpicksNum" type="Label" parent="LockpicksContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="PointsContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="PointsLabel" type="Label" parent="PointsContainer"]
+layout_mode = 2
+text = "Points"
+
+[node name="PointsNum" type="Label" parent="PointsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="SkillContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="SkillLabel" type="Label" parent="SkillContainer"]
+layout_mode = 2
+text = "Lockpicking-Skill"
+
+[node name="SkillNum" type="Label" parent="SkillContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"

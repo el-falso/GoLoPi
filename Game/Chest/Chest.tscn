@@ -1,14 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm8rl53y68af2"]
+[gd_scene load_steps=6 format=3 uid="uid://dm8rl53y68af2"]
 
+[ext_resource type="Script" path="res://Game/Chest/Chest.gd" id="1_ad3q3"]
 [ext_resource type="Texture2D" uid="uid://c60sqbn1mfdw8" path="res://Game/Chest/Chest.png" id="1_n7bmn"]
+[ext_resource type="AudioStream" uid="uid://bwwu0bv47nugq" path="res://Assets/Effects/right.wav" id="3_beu6h"]
+[ext_resource type="AudioStream" uid="uid://bj3h52rvj8wl7" path="res://Assets/Effects/wrong.wav" id="4_ujoat"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rebs0"]
 size = Vector2(64, 64)
 
 [node name="Chest" type="StaticBody2D"]
+script = ExtResource("1_ad3q3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_n7bmn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rebs0")
+
+[node name="RightAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_beu6h")
+
+[node name="WrongAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ujoat")
